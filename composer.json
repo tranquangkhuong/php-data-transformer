@@ -1,5 +1,5 @@
 {
-  "name": "tranquangkhuong/php-data-transformer",
+  "name": "tranquangkhuong/data-transformer",
   "description": "A package to transform data between applications based on JSON configuration.",
   "keywords": [
     "laravel",
@@ -25,6 +25,11 @@
   "autoload": {
     "psr-4": {
       "Tranquangkhuong\\DataTransformer\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tranquangkhuong\\DataTransformer\\Tests": "tests/"
     }
   }
 }
