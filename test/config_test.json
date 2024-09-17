@@ -1,0 +1,317 @@
+{
+    "variables": {
+        "array_key_separator": ".",
+        "group_value_separator": ","
+    },
+    "configs": [
+        {
+            "vneid": {
+                "key": "toKhai.quaTrinhCTNNNLV",
+                "type": "string",
+                "required": "true",
+                "case": "send"
+            },
+            "motcua": {
+                "key": "",
+                "type": "string",
+                "required": "true",
+                "case": "send"
+            },
+            "qllltp": {
+                "key": "toKhai.nycCuTru",
+                "type": "string",
+                "required": "true",
+                "case": "send",
+                "multiple": "true",
+                "children": [
+                    {
+                        "vneid": {
+                            "key": "toKhai.quaTrinhCTNNNLV.tuThangNam",
+                            "type": "date",
+                            "required": "true",
+                            "format": "d/m/Y",
+                            "case": "send"
+                        },
+                        "motcua": {
+                            "key": "",
+                            "type": "date",
+                            "required": "true",
+                            "format": "Y/m/d",
+                            "case": "send"
+                        },
+                        "qllltp": {
+                            "key": "toKhai.nycCuTru.tuNgay",
+                            "type": "date",
+                            "required": "true",
+                            "format": "d/m/Y",
+                            "case": "send"
+                        }
+                    },
+                    {
+                        "vneid": {
+                            "key": "toKhai.quaTrinhCTNNNLV.denThangNam",
+                            "type": "date",
+                            "required": "true",
+                            "format": "d/m/Y",
+                            "case": "send"
+                        },
+                        "motcua": {
+                            "key": "",
+                            "type": "date",
+                            "required": "true",
+                            "format": "Y/m/d",
+                            "case": "send"
+                        },
+                        "qllltp": {
+                            "key": "toKhai.nycCuTru.denNgay",
+                            "type": "date",
+                            "required": "true",
+                            "format": "d/m/Y",
+                            "case": "send"
+                        }
+                    },
+                    {
+                        "vneid": {
+                            "key": "toKhai.quaTrinhCTNNNLV.loaiCuTru",
+                            "type": "string",
+                            "required": "true",
+                            "case": "send"
+                        },
+                        "motcua": {
+                            "key": "",
+                            "type": "string",
+                            "required": "true",
+                            "case": "send"
+                        },
+                        "qllltp": {
+                            "key": "",
+                            "type": "string",
+                            "required": "true",
+                            "case": "send"
+                        }
+                    },
+                    {
+                        "vneid": {
+                            "key": "toKhai.quaTrinhCTNNNLV.diaChiCuTru.maQuocGia",
+                            "type": "string",
+                            "required": "true",
+                            "case": "send"
+                        },
+                        "motcua": {
+                            "key": "",
+                            "type": "string",
+                            "required": "true",
+                            "case": "send"
+                        },
+                        "qllltp": {
+                            "key": "",
+                            "type": "string",
+                            "required": "true",
+                            "case": "send"
+                        }
+                    },
+                    {
+                        "vneid": {
+                            "key": "toKhai.quaTrinhCTNNNLV.diaChiCuTru.tenQuocGia",
+                            "type": "string",
+                            "required": "true",
+                            "case": "send"
+                        },
+                        "motcua": {
+                            "key": "",
+                            "type": "string",
+                            "required": "true",
+                            "case": "send"
+                        },
+                        "qllltp": {
+                            "key": "",
+                            "type": "string",
+                            "required": "true",
+                            "case": "send"
+                        }
+                    },
+                    {
+                        "vneid": {
+                            "key": "toKhai.quaTrinhCTNNNLV.diaChiCuTru.maTinhThanh",
+                            "type": "string",
+                            "required": "true",
+                            "case": "send"
+                        },
+                        "motcua": {
+                            "key": "",
+                            "type": "string",
+                            "required": "true",
+                            "case": "send"
+                        },
+                        "qllltp": {
+                            "key": "",
+                            "type": "string",
+                            "required": "true",
+                            "case": "send"
+                        }
+                    },
+                    {
+                        "vneid": {
+                            "key": "toKhai.quaTrinhCTNNNLV.diaChiCuTru.tenTinhThanh",
+                            "type": "string",
+                            "required": "true",
+                            "case": "send"
+                        },
+                        "motcua": {
+                            "key": "",
+                            "type": "string",
+                            "required": "true",
+                            "case": "send"
+                        },
+                        "qllltp": {
+                            "key": "",
+                            "type": "string",
+                            "required": "true",
+                            "case": "send"
+                        }
+                    },
+                    {
+                        "vneid": {
+                            "key": "toKhai.quaTrinhCTNNNLV.ngheNghiep",
+                            "type": "string",
+                            "required": "true",
+                            "case": "send"
+                        },
+                        "motcua": {
+                            "key": "",
+                            "type": "string",
+                            "required": "true",
+                            "case": "send"
+                        },
+                        "qllltp": {
+                            "key": "toKhai.nycCuTru.ngheNghiep",
+                            "type": "string",
+                            "required": "true",
+                            "case": "send"
+                        }
+                    },
+                    {
+                        "vneid": {
+                            "key": "toKhai.quaTrinhCTNNNLV.noiLamViec",
+                            "type": "string",
+                            "required": "true",
+                            "case": "send"
+                        },
+                        "motcua": {
+                            "key": "",
+                            "type": "string",
+                            "required": "true",
+                            "case": "send"
+                        },
+                        "qllltp": {
+                            "key": "toKhai.nycCuTru.noiLamViec",
+                            "type": "string",
+                            "required": "true",
+                            "case": "send"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "vneid": {
+                "key": "toKhai.nycHoTen",
+                "type": "string",
+                "required": "true",
+                "case": "send"
+            },
+            "motcua": {
+                "key": "",
+                "type": "string",
+                "required": "true",
+                "case": "send"
+            },
+            "qllltp": {
+                "key": "toKhai.nycHoTen",
+                "type": "string",
+                "required": "true",
+                "case": "send"
+            }
+        },
+        {
+            "vneid": {
+                "key": "toKhai.nycThuongTru.maTinhThanh",
+                "type": "string",
+                "required": "true",
+                "case": "send"
+            },
+            "motcua": {
+                "key": "",
+                "type": "string",
+                "required": "true",
+                "case": "send"
+            },
+            "qllltp": {
+                "key": "toKhai.nycThuongTru.maTinhThanh",
+                "type": "string",
+                "required": "true",
+                "case": "send"
+            }
+        },
+        {
+            "vneid": {
+                "key": "toKhai.nycThuongTru.tenTinhThanh",
+                "type": "string",
+                "required": "true",
+                "case": "send"
+            },
+            "motcua": {
+                "key": "",
+                "type": "string",
+                "required": "true",
+                "case": "send"
+            },
+            "qllltp": {
+                "key": "toKhai.nycThuongTru.tenTinhThanh",
+                "type": "string",
+                "required": "true",
+                "case": "send"
+            }
+        },
+        {
+            "vneid": {
+                "key": "toKhai.thongTinUyQuyen.nuqQuanHe.ma",
+                "type": "string",
+                "required": "true",
+                "case": "send"
+            },
+            "motcua": {
+                "key": "",
+                "type": "string",
+                "required": "true",
+                "case": "send"
+            },
+            "qllltp": {
+                "key": "",
+                "type": "string",
+                "required": "true",
+                "case": "send"
+            }
+        },
+        {
+            "vneid": {
+                "key": "toKhai.thongTinUyQuyen.nuqQuanHe.ten",
+                "type": "string",
+                "required": "true",
+                "case": "send"
+            },
+            "motcua": {
+                "key": "",
+                "type": "string",
+                "required": "true",
+                "case": "send"
+            },
+            "qllltp": {
+                "key": "toKhai.nuqQuanHe",
+                "type": "string",
+                "required": "true",
+                "case": "send"
+            }
+        }
+    ]
+}

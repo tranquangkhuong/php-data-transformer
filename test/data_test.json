@@ -1,0 +1,178 @@
+{
+    "maTinh": "01",
+    "tenTinh": "Thành phố Hà Nội",
+    "maHoSoMCDT": "H26.16-240808-0001",
+    "ngayTiepNhan": "08/08/2024",
+    "nguonDangKy": 2,
+    "tenNguonDangKy": "Hồ sơ đăng ký trên ứng dụng VNeID",
+    "toKhai": {
+        "loaiPhieu": 1,
+        "yeuCauCDNCV": 1,
+        "maMucDich": 4,
+        "tenMucDich": "Khác",
+        "mucDichKhac": "Bổ sung hồ sơ xin việc",
+        "soLuongCap": 3,
+        "nycHoTen": "Trần Hoài Nam",
+        "nycTenGoiKhac": "NAM ANH",
+        "nycGioiTinh": 1,
+        "nycTenGioiTinh": "Nam",
+        "nycNgaySinh": "01/01/1990",
+        "nycDoiTuongNopPhi": "3",
+        "nycTenDoiTuongNopPhi": "Người khuyết tật theo quy định tại Luật người khuyết tật.",
+        "nycThuongTru": {
+            "maTinhThanh": "01",
+            "tenTinhThanh": "Thành phố Hà Nội",
+            "maQuanHuyen": "008",
+            "tenQuanHuyen": "Quận Hoàng Mai",
+            "maPhuongXa": "00325",
+            "tenPhuongXa": "Phường Giáp Bát",
+            "chiTiet": "Số 10"
+        },
+        "nycTamTru": {
+            "maTinhThanh": "01",
+            "tenTinhThanh": "Thành phố Hà Nội",
+            "maQuanHuyen": "008",
+            "tenQuanHuyen": "Quận Hoàng Mai",
+            "maPhuongXa": "00325",
+            "tenPhuongXa": "Phường Giáp Bát",
+            "chiTiet": "Số 10"
+        },
+        "nycDienThoai": "039098990998",
+        "nycEmail": "nguyenvana@example.com",
+        "nycLoaiGiayTo": 1,
+        "nycTenLoaiGiayTo": "CCCD",
+        "nycSoGiayTo": "001313003004",
+        "nycNgayCapGiayTo": "01/07/2024",
+        "nycNoiCapGiayTo": "Cục cảnh sát QLHC về TTXH",
+        "nycQuocTich": "VN",
+        "nycTenQuocTich": "Việt Nam",
+        "nycDanToc": "01",
+        "nycTenDanToc": "Kinh",
+        "nycHoTenCha": "Trần Hoài Nam",
+        "chaNamSinh": "1989",
+        "nycHoTenMe": "Phạm Tuyết",
+        "meNamSinh": "1995",
+        "nycHoTenVoChong": "Dương Thị Giàng",
+        "voChongNamSinh": "2000",
+        "nycNoiSinh": {
+            "maQuocGia": "VN",
+            "tenQuocGia": "Việt Nam",
+            "maTinhThanh": "01",
+            "tenTinhThanh": "Thành phố Hà Nội"
+        },
+        "uyQuyen": 1,
+        "thongTinUyQuyen": {
+            "nuqHoTen": "Họ và tên người được uỷ quyền",
+            "nuqGioiTinh": 1,
+            "nuqTenGioiTinh": "Nam",
+            "nuqNgaySinh": "01/01/2010",
+            "nuqDienThoai": "039098990998",
+            "nuqEmail": "nguyenvana@example.com",
+            "nuqLoaiGiayto": 1,
+            "nuqTenLoaiGiayTo": "CCCD",
+            "nuqSoGiayTo": "123456789",
+            "nuqNgayCapGiayTo": "01/01/2010",
+            "nuqNoiCapGiayTo": "Cục cảnh sát QLHC về TTXH",
+            "nuqQuocTich": "VN",
+            "nuqTenQuocTich": "Việt Nam",
+            "nuqDanToc": "01",
+            "nuqTenDanToc": "Kinh",
+            "nuqNoiOHienTai": {
+                "maTinhThanh": "01",
+                "tenTinhThanh": "Thành phố Hà Nội",
+                "maQuanHuyen": "008",
+                "tenQuanHuyen": "Quận Hoàng Mai",
+                "maPhuongXa": "00325",
+                "tenPhuongXa": "Phường Giáp Bát",
+                "chiTiet": "Số 10"
+            },
+            "nuqQuanHe": {
+                "ma": 1,
+                "ten": "Cha"
+            },
+            "nuqNgayKyVanBanUyQuyen": "01/01/2010"
+        },
+        "thongTinAnTich": "Thông tin về án tích, cấm đảm nhiệm chức vụ, thành lập, quản lý doanh nghiệp, hợp tác xã",
+        "quaTrinhCTNNNLV": [
+            {
+                "tuThangNam": "02/2022",
+                "denThangNam": "07/2022",
+                "loaiCuTru": 1,
+                "diaChiCuTru": {
+                    "maQuocGia": "VN",
+                    "tenQuocGia": "Việt Nam",
+                    "maTinhThanh": "01",
+                    "tenTinhThanh": "Thành phố Hà Nội",
+                    "maQuanHuyen": "008",
+                    "tenQuanHuyen": "Quận Hoàng Mai",
+                    "maPhuongXa": "00325",
+                    "tenPhuongXa": "Phường Giáp Bát",
+                    "chiTiet": "Số 10"
+                },
+                "ngheNghiep": "Nhân viên chứng từ",
+                "noiLamViec": "Công ty TNHH Bolco"
+            },
+            {
+                "tuThangNam": "07/2022",
+                "denThangNam": "12/2023",
+                "loaiCuTru": 1,
+                "diaChiCuTru": {
+                    "maQuocGia": "VN",
+                    "tenQuocGia": "Việt Nam",
+                    "maTinhThanh": "01",
+                    "tenTinhThanh": "Thành phố Hà Nội",
+                    "maQuanHuyen": "008",
+                    "tenQuanHuyen": "Quận Hoàng Mai",
+                    "maPhuongXa": "00325",
+                    "tenPhuongXa": "Phường Giáp Bát",
+                    "chiTiet": "Số 10"
+                },
+                "ngheNghiep": "Nhân viên văn phòng",
+                "noiLamViec": "Công ty TNHH Bố Cô"
+            }
+        ],
+        "thongTinThanhToan ": {
+            "nhomDoiTuong": 1,
+            "tenNhomDoiTuong": "Sinh viên",
+            "phiLLTP": "200000",
+            "phiCapThemBanGiay": "10000",
+            "hinhThucNhanBanGiay": 2,
+            "tenHinhThucNhanBanGiay": "Qua dịch vụ bưu chính công ích",
+            "diaChiNhan": "Xóm5, Mỹ Hưng, Mỹ Lộc, Nam Định",
+            "tongPhi": "210000"
+        },
+        "giayToDinhKem": [
+            {
+                "ma": "doiTuongNopPhi",
+                "ten": "Giấy tờ đối tượng nộp phí",
+                "danhSach": [
+                    {
+                        "loai": "image/pdf",
+                        "duLieu": "base64"
+                    }
+                ]
+            }
+        ]
+    },
+    "thongTinBienLai": {
+        "maDichVu": 2,
+        "maDVC": "2.000488.000.00.00.H57.01",
+        "tenDVC": "Cấp Phiếu lý lịch tư pháp cho công dân Việt Nam người nước ngoài đang cư trú tại Việt Nam",
+        "maTTHC": "2.000488",
+        "tenTTHC": "Cấp Phiếu lý lịch tư pháp cho công dân Việt Nam người nước ngoài đang cư trú tại Việt Nam ",
+        "maDonVi": "H26.16",
+        "tenDonVi": "Sở Tư pháp Thành phố Hà Nội",
+        "tKThuHuong": "4500303888",
+        "maNHThuHuong": "01202017",
+        "tenTKThuHuong": "SO TU PHAP THANH PHO HA NOI",
+        "dSKhoanNop": [
+            {
+                "noiDung": "Phí cấp cung cấp thông tin về lý lịch tư pháp",
+                "soTien": "210000"
+            }
+        ],
+        "trangThaiGD": 1,
+        "tenTrangThaiGD": "Thành công – Napas đã trừ tiền thành công",
+        "urlBienLai": "https://dvc-dev.napas.com.vn/nps/bills/file/840127352"
+    }
+}

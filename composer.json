@@ -1,0 +1,30 @@
+{
+  "name": "tranquangkhuong/php-data-transformer",
+  "description": "A package to transform data between applications based on JSON configuration.",
+  "keywords": [
+    "laravel",
+    "data",
+    "transformer"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tran Quang Khuong",
+      "email": "khuongtran.it@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.1"
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^7.1"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "Tranquangkhuong\\DataTransformer\\": "src/"
+    }
+  }
+}
