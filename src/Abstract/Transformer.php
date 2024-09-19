@@ -213,9 +213,10 @@ abstract class Transformer
      */
     protected function transformString(mixed $value, array $config): string
     {
-        if (!is_string($value)) {
+        if (is_array($value) || is_object($value)) {
             return '';
         }
+        $value = (string) $value;
 
         return match ($config['format'] ?? '') {
             'lower' => mb_strtolower($value),

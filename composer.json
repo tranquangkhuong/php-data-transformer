@@ -25,11 +25,14 @@
   "autoload": {
     "psr-4": {
       "Tranquangkhuong\\DataTransformer\\": "src/"
-    }
+    },
+    "files": [
+      "src/Global/functions.php"
+    ]
   },
   "autoload-dev": {
     "psr-4": {
-      "Tranquangkhuong\\DataTransformer\\Tests": "tests/"
+      "Tranquangkhuong\\DataTransformer\\Tests\\": "tests/"
     }
   }
 }

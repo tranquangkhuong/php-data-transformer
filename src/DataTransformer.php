@@ -44,7 +44,8 @@ class DataTransformer extends Transformer
             $toConfig = $field[$to];
             if (!$this->isFieldAllowed($toConfig)) continue;
             $fromConfig = $field[$from];
-            $value = $this->getValueAppFrom($fromConfig, $toConfig);
+            $childrenConfig = $field['__[children]'] ?? [];
+            $value = $this->getValueAppFrom($fromConfig, $toConfig, $childrenConfig);
             $this->setValueToResult($value, $toConfig);
         }
 
@@ -56,9 +57,10 @@ class DataTransformer extends Transformer
      * 
      * @param array $fromConfig
      * @param array $toConfig
+     * @param array $childrenConfig
      * @return mixed
      */
-    private function getValueAppFrom(array $fromConfig, array $toConfig): mixed
+    private function getValueAppFrom(array $fromConfig, array $toConfig, array $childrenConfig = []): mixed
     {
         $keys = explode($this->arrayKeySeparator, $fromConfig['key']);
         $value = $this->data;
@@ -87,8 +89,8 @@ class DataTransformer extends Transformer
             }
         }
 
-        if (isset($toConfig['multiple']) && $toConfig['multiple'] == 'true') {
-            $value = (new MultipleChildValue)->config($toConfig['children'])
+        if (isset($toConfig['multi_child']) && $toConfig['multi_child'] == 'true') {
+            $value = (new MultipleChildValue)->config($childrenConfig)
                 ->data($value)
                 ->case($this->case)
                 ->prefixKeyFrom($fromConfig['key'])
