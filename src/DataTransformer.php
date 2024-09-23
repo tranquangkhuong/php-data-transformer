@@ -21,13 +21,13 @@ class DataTransformer extends Transformer
         if (isset($conf['variables'])) {
             if (
                 isset($conf['variables']['array_key_separator']) &&
-                (string) $conf['variables']['array_key_separator'] != ''
+                '' != (string) $conf['variables']['array_key_separator']
             ) {
                 $this->arrayKeySeparator($conf['variables']['array_key_separator']);
             }
             if (
                 isset($conf['variables']['group_value_separator']) &&
-                (string) $conf['variables']['group_value_separator'] != ''
+                '' != (string) $conf['variables']['group_value_separator']
             ) {
                 $this->groupValueSeparator($conf['variables']['group_value_separator']);
             }
@@ -43,6 +43,7 @@ class DataTransformer extends Transformer
         foreach ($this->config as $field) {
             $toConfig = $field[$to];
             if (!$this->isFieldAllowed($toConfig)) continue;
+
             $fromConfig = $field[$from];
             $childrenConfig = $field['__[children]'] ?? [];
             $value = $this->getValueAppFrom($fromConfig, $toConfig, $childrenConfig);
@@ -73,30 +74,28 @@ class DataTransformer extends Transformer
             $value = $value[$k];
         }
 
-        if ($value === null || $value == '') {
+        if (null === $value || '' == $value) {
             if (
                 isset($toConfig['required']) &&
-                $toConfig['required'] == 'true' &&
+                true == $toConfig['required'] &&
                 isset($toConfig['default'])
             ) {
-                if ($toConfig['type'] == 'date') {
+                if ('date' == $toConfig['type']) {
                     $value = date($toConfig['format']);
                     // } elseif ($toConfig['type'] == 'number') {
                     //     $value = $toConfig['default'];
                 } else {
-                    $value = $toConfig['default'] == 'null' ? null : $toConfig['default'];
+                    $value = 'null' == $toConfig['default'] ? null : $toConfig['default'];
                 }
             }
         }
 
-        if (isset($toConfig['multi_child']) && $toConfig['multi_child'] == 'true') {
+        if ('list' === $toConfig['type']) {
             $value = (new MultipleChildValue)->config($childrenConfig)
                 ->data($value)
                 ->case($this->case)
-                ->prefixKeyFrom($fromConfig['key'])
-                ->prefixKeyTo($toConfig['key'])
                 ->transform($this->fromApp, $this->toApp);
-        } else if ($value !== null && $value !== '') {
+        } else if (null !== $value && '' !== $value) {
             $value = $this->transformValue($value, $toConfig);
         }
 
@@ -112,9 +111,9 @@ class DataTransformer extends Transformer
      */
     private function setValueToResult(mixed $value, array $config): void
     {
-        if ($this->fillType->is(FillType::SKIP_NULL) && $value === null) return;
-        if ($this->fillType->is(FillType::SKIP_EMPTY) && $value === '') return;
-        if ($this->fillType->is(FillType::SKIP_NULL_EMPTY) && ($value === null || $value == '')) return;
+        if ($this->fillType->is(FillType::SKIP_NULL) && null === $value) return;
+        if ($this->fillType->is(FillType::SKIP_EMPTY) && '' === $value) return;
+        if ($this->fillType->is(FillType::SKIP_NULL_EMPTY) && (null === $value || '' == $value)) return;
 
         $keys = explode($this->arrayKeySeparator, $config['key']);
         $temp = &$this->result;

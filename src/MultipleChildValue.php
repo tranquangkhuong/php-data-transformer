@@ -10,20 +10,6 @@ use Tranquangkhuong\DataTransformer\Enum\FillType;
  */
 class MultipleChildValue extends Transformer
 {
-    /**
-     * Prefix key from
-     * 
-     * @var string
-     */
-    private string $prefixKeyFrom;
-
-    /**
-     * Prefix key to
-     * 
-     * @var string
-     */
-    private string $prefixKeyTo;
-
     public function config(array|string $config): static
     {
         if (is_string($config)) {
@@ -32,30 +18,6 @@ class MultipleChildValue extends Transformer
             $this->config = $config;
         }
 
-        return $this;
-    }
-
-    /**
-     * Set prefix key from
-     * 
-     * @param string $prefix
-     * @return static
-     */
-    public function prefixKeyFrom(string $prefix): static
-    {
-        $this->prefixKeyFrom = $prefix . $this->arrayKeySeparator;
-        return $this;
-    }
-
-    /**
-     * Set prefix key to
-     * 
-     * @param string $prefix
-     * @return static
-     */
-    public function prefixKeyTo(string $prefix): static
-    {
-        $this->prefixKeyTo = $prefix . $this->arrayKeySeparator;
         return $this;
     }
 
@@ -89,7 +51,7 @@ class MultipleChildValue extends Transformer
      */
     private function getValueAppFrom(array $data, array $fromConfig, array $toConfig): mixed
     {
-        $keys = explode($this->arrayKeySeparator, str_replace($this->prefixKeyFrom, '', $fromConfig['key']));
+        $keys = explode($this->arrayKeySeparator, $fromConfig['key']);
         $value = &$data;
 
         foreach ($keys as $k) {
@@ -100,10 +62,10 @@ class MultipleChildValue extends Transformer
             $value = $value[$k];
         }
 
-        if ($value === null || $value == '') {
+        if (null === $value || '' == $value) {
             if (
                 isset($toConfig['required']) &&
-                $toConfig['required'] == 'true' &&
+                $toConfig['required'] == true &&
                 isset($toConfig['default'])
             ) {
                 if ($toConfig['type'] == 'date') {
@@ -116,7 +78,7 @@ class MultipleChildValue extends Transformer
             }
         }
 
-        if ($value !== null && $value !== '') {
+        if (null !== $value && '' !== $value) {
             $value = $this->transformValue($value, $toConfig);
         }
 
@@ -133,11 +95,11 @@ class MultipleChildValue extends Transformer
      */
     private function setValueToResult(array $result, $value, array $config): array
     {
-        if ($this->fillType->is(FillType::SKIP_NULL) && $value === null) return $result;
-        if ($this->fillType->is(FillType::SKIP_EMPTY) && $value === '') return $result;
-        if ($this->fillType->is(FillType::SKIP_NULL_EMPTY) && ($value === null || $value == '')) return $result;
+        if ($this->fillType->is(FillType::SKIP_NULL) && null === $value) return $result;
+        if ($this->fillType->is(FillType::SKIP_EMPTY) && '' === $value) return $result;
+        if ($this->fillType->is(FillType::SKIP_NULL_EMPTY) && (null === $value || '' == $value)) return $result;
 
-        $keys = explode($this->arrayKeySeparator, str_replace($this->prefixKeyTo, '', $config['key']));
+        $keys = explode($this->arrayKeySeparator, $config['key']);
         $temp = &$result;
 
         foreach ($keys as $k) {
