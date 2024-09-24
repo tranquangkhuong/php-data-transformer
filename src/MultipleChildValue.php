@@ -32,7 +32,8 @@ class MultipleChildValue extends Transformer
                 if (!$this->isFieldAllowed($toConfig)) continue;
 
                 $fromConfig = $field[$from];
-                $value = $this->getValueAppFrom($dt, $fromConfig, $toConfig);
+                $childrenConfig = $field['__[children]'] ?? [];
+                $value = $this->getValueAppFrom($dt, $fromConfig, $toConfig, $childrenConfig);
                 $result = $this->setValueToResult($result, $value, $toConfig);
             }
             $this->result[] = $result;
@@ -49,7 +50,7 @@ class MultipleChildValue extends Transformer
      * @param array $toConfig
      * @return mixed
      */
-    private function getValueAppFrom(array $data, array $fromConfig, array $toConfig): mixed
+    private function getValueAppFrom(array $data, array $fromConfig, array $toConfig, array $childrenConfig = []): mixed
     {
         $keys = explode($this->arrayKeySeparator, $fromConfig['key']);
         $value = &$data;
@@ -78,7 +79,12 @@ class MultipleChildValue extends Transformer
             }
         }
 
-        if (null !== $value && '' !== $value) {
+        if ('list' === $toConfig['type']) {
+            $value = (new MultipleChildValue)->config($childrenConfig)
+                ->data($value)
+                ->case($this->case)
+                ->transform($this->fromApp, $this->toApp);
+        } else if (null !== $value && '' !== $value) {
             $value = $this->transformValue($value, $toConfig);
         }
 
