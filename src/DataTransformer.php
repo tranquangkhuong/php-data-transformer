@@ -74,7 +74,7 @@ class DataTransformer extends Transformer
             $value = $value[$k];
         }
 
-        if (null === $value || '' == $value) {
+        if ([] === $value || null === $value || '' == $value) {
             if (
                 isset($toConfig['required']) &&
                 true == $toConfig['required'] &&
@@ -90,7 +90,7 @@ class DataTransformer extends Transformer
             }
         }
 
-        if ('list' === $toConfig['type']) {
+        if ('list' === $toConfig['type'] && is_array($value)) {
             $value = (new MultipleChildValue)->config($childrenConfig)
                 ->data($value)
                 ->case($this->case)

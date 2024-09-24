@@ -63,7 +63,7 @@ class MultipleChildValue extends Transformer
             $value = $value[$k];
         }
 
-        if (null === $value || '' == $value) {
+        if ([] === $value || null === $value || '' == $value) {
             if (
                 isset($toConfig['required']) &&
                 $toConfig['required'] == true &&
@@ -79,7 +79,7 @@ class MultipleChildValue extends Transformer
             }
         }
 
-        if ('list' === $toConfig['type']) {
+        if ('list' === $toConfig['type'] && is_array($value)) {
             $value = (new MultipleChildValue)->config($childrenConfig)
                 ->data($value)
                 ->case($this->case)
